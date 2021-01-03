@@ -1,0 +1,117 @@
+<!-- Event binding
+
+<div class="container-fluid">
+    <div class="row">
+        <button (click)=onClick($event)>click me</button>
+    </div>
+</div> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Template reference variable
+
+<div class="container-fluid">
+    <div class="row">
+        <input #templateReferenceVariable type="text">
+        <button (click)=onClickofInput(templateReferenceVariable.value)>Log</button>
+    </div>
+    <div class="row">
+        <input #templateReferenceVariable1 type="text">
+        <button (click)=onClickOfInput1(templateReferenceVariable1)>Log</button>
+    </div>
+</div> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<!-- Two way binding
+
+<div class="container-fluid">
+    <div class="row">
+        <input [(ngModel)]="name" type="text">
+    </div>
+    <div class="row">
+        {{name}}
+    </div>
+</div> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<!-- Structural Directive
+
+<div class="container-fluid">
+    <div class="row">
+        <h4 *ngIf="ngIF; else elseBlock">Welcome to Code evolution</h4>
+    </div>
+
+    <ng-template #elseBlock>
+        <h4>Inside else block</h4>
+    </ng-template>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div *ngIf="displayName; then ifBlock; else elseBlock"></div>
+
+        <ng-template #ifBlock>
+            <h4>If block</h4>
+        </ng-template>
+
+        <ng-template #elseBlock>
+            <h4>Else block</h4>
+        </ng-template>
+    </div>
+</div> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<!-- NgSwitch
+
+<div class="container-fluid">
+    <div [ngSwitch]="color">
+        <div *ngSwitchCase="'red'">You have picked Red Color</div>
+        <div *ngSwitchCase="'yello'">You have picked Yellow Color</div>
+        <div *ngSwitchCase="'blue'">You have Picked Blue color</div>
+        <div *ngSwitchDefault>Please choose a color again</div>
+    </div>
+</div> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<!-- NgFor
+
+<div class="container-fluid">
+    <div *ngFor="let color of colors">
+        <h4>{{color}}</h4>
+    </div>
+</div> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<!-- ParentData
+
+<div class="container-fluid">
+    <h4>Hello {{firstName}}</h4>
+</div>
+
+ChildData
+<div class="container-fluid">
+    <button (click)="fireEvent()">Export to app component</button>
+</div> -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<!-- Pipes
+
+<h4>{{newName | lowercase}}</h4>
+<h4>{{newName | uppercase}}</h4>
+<h4>{{newName | titlecase}}</h4>
+<h4>{{newName | slice:3:5}}</h4>
+<h4>{{person | json}}</h4>
+
+
+<h4 >{{3.456 | number : '1.2-3'}}</h4>
+<h4>{{5.34|number: '4.4-4'}}</h4>
+
+not completed -->
+
+<!-- --------------------------------------------------------------------------------------------------------------------- -->
+<div class="container-fluid">
+    Employee List 
+    <ul *ngFor="let employe of employes">
+        <li>{{employe.name}}</li>
+    </ul>
+</div>
