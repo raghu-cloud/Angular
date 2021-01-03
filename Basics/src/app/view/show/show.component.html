@@ -1,0 +1,9 @@
+User Name : <input type="text" [(ngModel)]='input'>
+
+<button (click)='fetchData()'>Search</button> 
+<p></p>
+
+<div *ngIf="resp">
+    <p>Followers : {{resp.followers}}</p>
+    <p>Created at : {{resp.created_at}}</p>
+</div>

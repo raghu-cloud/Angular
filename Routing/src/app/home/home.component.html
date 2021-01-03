@@ -1,0 +1,11 @@
+<h1>My App</h1>
+
+<!-- <a [routerLink]='homeRoute'>Home</a>
+
+<p></p>
+
+<a [routerLink]='settingsRoute'>Settings</a> -->
+
+<p *ngFor='let rute of rutes'></p>
+<a *ngFor = 'let route of routes'  [routerLink] = 'route.Url' >{{route.linkName}}</a>
+

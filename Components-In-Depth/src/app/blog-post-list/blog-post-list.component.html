@@ -1,0 +1,13 @@
+<a href="#" (click)="expandAllorCollapse()">Expand/Collapse   </a> 
+
+
+<blog-post-tile
+    *ngFor ="let post of blogPosts[currentPage]"
+    [blogposts]="post" #tile
+></blog-post-tile>
+
+
+
+<!-- <blog-post-tile [blogposts]="blogPosts[0][0]" #tile></blog-post-tile> -->
+
+<pagination [noOfPages]="blogPosts.length" (clickedPage)="updatePage($event)"></pagination>

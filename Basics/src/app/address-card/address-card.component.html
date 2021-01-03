@@ -1,0 +1,9 @@
+<p>{{usrObj.name}}</p>
+<p>{{usrObj.title}}</p>
+<button *ngIf="!isCollapsed" (click)="showDropDown()">Collaps</button>
+<button *ngIf="isCollapsed" (click)="showDropDown()">Expand</button>
+<div *ngIf="!isCollapsed">
+<p>{{usrObj.address}}</p>
+<p>Phone Numbers:</p>
+<p *ngFor="let numbers of usrObj.phone">{{numbers}}</p>
+</div>
