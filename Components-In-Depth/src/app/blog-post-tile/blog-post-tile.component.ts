@@ -11,8 +11,7 @@ export class BlogPostTileComponent implements OnInit {
 
   @Input() blogposts : BlogPost ;
 
-  title : string;
-  summery : string;
+  
   
   shortSummary : string ;
 
@@ -31,6 +30,10 @@ export class BlogPostTileComponent implements OnInit {
   ngOnInit() {
     this.fullSummery=this.blogposts.summary;
    this.shortSummary = this.truncate.transform(this.fullSummery,300);
+  }
+
+  markAllFavourite(){
+    this.isFavorite=true;
   }
 
   changeSummary(){

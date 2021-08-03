@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   homeRoute='/home';
   settingsRoute='/settings';
 
-  rutes:['abc','def']
+  rutes: ['abc','def']
 
   constructor() { }
 

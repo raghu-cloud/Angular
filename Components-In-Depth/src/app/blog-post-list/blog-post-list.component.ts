@@ -10,7 +10,7 @@ import { BlogPostTileComponent } from '../blog-post-tile/blog-post-tile.componen
 })
 export class BlogPostListComponent implements OnInit {
 
-  @Input() blogPosts: BlogPost [][] = [];
+  @Input() blogPosts: BlogPost [][];
 
   @ViewChildren('tile') blogPostTileComponent  : QueryList<BlogPostTileComponent>;
 
@@ -22,12 +22,18 @@ export class BlogPostListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.currentPage=1;   
+    this.currentPage=0;   
   }
 
   updatePage(pageNumber){
     this.currentPage=pageNumber;
   }
+
+  favouriteAll(){
+    this.blogPostTileComponent.forEach(post => post.markAllFavourite());
+  }
+
+  
 
   expandAllorCollapse(){
     this.blogPostTileComponent.forEach(e => e.expandOrCollapse());

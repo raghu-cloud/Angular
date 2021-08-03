@@ -1,6 +1,6 @@
 <div class="card " [ngClass]="{'favorite' : isFavorite}">
     <div class="card-body">
-        <h5 class="card-title">{{ blogposts.title }}</h5>
+        <h5 class="card-title" appHighlighter="blue">{{ blogposts.title }}</h5>
         <p *ngIf="!isFull" class="card-text" (click)="changeSummary()">{{ shortSummary }}</p>
         <p *ngIf="isFull" class="card-text" (click)="changeSummary()">{{ blogposts.summary }}</p>
         <a href="#" class="btn btn-primary">Read</a> 
